@@ -1,4 +1,0 @@
-{
-  "db": "mongodb+srv://faisal-786:faisal123456@cluster0.589tu.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtPrivateKey": "SomePrivateKey"
-}
