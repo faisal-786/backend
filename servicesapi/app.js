@@ -21,6 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+
+const port =process.env.PORT || 5000;;
+
 app.use("/", indexRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/products", productsRouter);
@@ -47,4 +50,5 @@ mongoose
   })
   .then(() => console.log("Connected to Mongo...."))
   .catch((error) => console.log(error.message));
+app.listen(port,()=>console.log("server running on port ",port))
 module.exports = app;
